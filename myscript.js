@@ -1,4 +1,5 @@
 var map;
+
 function initialize()
 {
   map = new google.maps.Map(document.getElementById('map'), {
@@ -6,6 +7,7 @@ function initialize()
     zoom: 4
   });
 }
+
 function melbourneMap()
 {
   map = new google.maps.Map(document.getElementById('map'), {
@@ -13,12 +15,14 @@ function melbourneMap()
     zoom: 14
   });
 }
+
+//Camera function
 function initMap() {
   map = new google.maps.Map(document.getElementById('map'), {
     zoom: 14,
     center: new google.maps.LatLng(-37.8149202, 144.9626441),
-      content: '<i class="fa fa-map-marker fa-10x"></i>',
-    //mapTypeId: 'roadmap'
+    //content: '<i class="fa fa-map-marker fa-10x"></i>',
+    mapTypeId: 'roadmap'
   });
     
 //Marker icons
@@ -143,6 +147,65 @@ function initMap() {
   });
 }
 
+//Roundabout arrow function
+function arrows() {
+  var map = new google.maps.Map(document.getElementById('map'), {
+    zoom: 14,
+    center: {lat: -37.8149202, lng: 144.9626441},
+    mapTypeId: 'roadmap'
+  });
+
+  var lineSymbol = {
+    path: google.maps.SymbolPath.FORWARD_CLOSED_ARROW
+  };
+
+//Arrow locations
+var features = [
+    {
+      path: [{lat: -37.815298, lng: 144.974800}, {lat: -37.815942, lng: 144.972622}],
+    }, {
+      path: [{lat: -37.816722, lng: 144.969940}, {lat: -37.817417, lng: 144.967612}],
+    }, {
+      path: [{lat: -37.818129, lng: 144.965059}, {lat: -37.818824, lng: 144.962656}],
+    }, {
+      path: [{lat: -37.819495, lng: 144.960384}, {lat: -37.820326, lng: 144.957595}],
+    }, {
+      path: [{lat: -37.820955, lng: 144.954974}, {lat: -37.819090, lng: 144.954148}],
+    }, {
+      path: [{lat: -37.816323, lng: 144.952818}, {lat: -37.813563, lng: 144.951628}],
+    }, {
+      path: [{lat: -37.812792, lng: 144.952797}, {lat: -37.811995, lng: 144.955544}],
+    }, {
+      path: [{lat: -37.811139, lng: 144.956134}, {lat: -37.809656, lng: 144.955458}],
+    }, {
+      path: [{lat: -37.808054, lng: 144.955587}, {lat: -37.806138, lng: 144.955920}],
+    }, {
+      path: [{lat: -37.806019, lng: 144.957165}, {lat: -37.806307, lng: 144.959729}],
+    }, {
+      path: [{lat: -37.806595, lng: 144.962325}, {lat: -37.806917, lng: 144.965329}],
+    }, {
+      path: [{lat: -37.807163, lng: 144.967636}, {lat: -37.807460, lng: 144.970254}],
+    }, {
+      path: [{lat: -37.807943, lng: 144.971499}, {lat: -37.809579, lng: 144.972143}],
+    }, {
+      path: [{lat: -37.810562, lng: 144.972765}, {lat: -37.811944, lng: 144.973323}],
+    }, {
+      path: [{lat: -37.813054, lng: 144.973838}, {lat: -37.814715, lng: 144.974600}],
+    }
+  ];
+  
+  features.forEach(function(feature) {
+    var line = new google.maps.Polyline({
+      path: feature.path,
+      icons: [{
+      icon: lineSymbol,
+      offset: '100%'
+    }],
+    map: map
+     });
+  });
+}
+
 //google.maps.event.addDomListener(window, 'load', initialize);
 
 $(document).ready(function(){
@@ -161,6 +224,10 @@ $(document).ready(function(){
             case '3':
                   initMap();
             $('#show').html("These are the Zone 1 Camera locations in Melbourne CBD.");
+                  break;
+            case '4':
+                  arrows();
+            $('#show').html("Making Melbourne CBD a huge roundabout.");
                   break;
         }
     });
