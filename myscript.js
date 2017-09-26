@@ -251,20 +251,20 @@ $(document).ready(function(){
     switch(n)
     {
             case '1':
-            melbourneMap();
+                melbourneMap();
             $('#show').html("This is Melbourne CBD.");
                   break;
             case '2':
-                  initialize();
-                $('#show').html("This is the default location.");
+                  arrows();
+            $('#show').html("Making Melbourne CBD a huge roundabout.");
                   break;
             case '3':
                   initMap();
             $('#show').html("These are the Zone 1 Camera locations in Melbourne CBD.");
                   break;
             case '4':
-                  arrows();
-            $('#show').html("Making Melbourne CBD a huge roundabout.");
+                  initialize();
+            $('#show').html("This is the default location.");
                   break;
         }
     });
