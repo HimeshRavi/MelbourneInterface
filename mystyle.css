@@ -10,7 +10,7 @@ html, body {
 
 .row {
     display: flex;
-    padding: 0px 25px 0px 25px;
+    padding: 0px 25px 25px 25px;
 }
 .col {
     flex: 1;
