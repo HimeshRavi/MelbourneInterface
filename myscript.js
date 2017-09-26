@@ -3,8 +3,9 @@ var map;
 function initialize()
 {
   map = new google.maps.Map(document.getElementById('map'), {
-    center: new google.maps.LatLng(-27.7314007, 135.141253),//Setting Initial Position
-    zoom: 4
+    center: new google.maps.LatLng(-38.0971929,144.9755815),//Setting Initial Position
+    zoom: 9,
+    mapTypeId: 'roadmap'
   });
 }
 
@@ -58,7 +59,6 @@ function cameraMap() {
   map = new google.maps.Map(document.getElementById('map'), {
     zoom: 15,
     center: new google.maps.LatLng(-37.8133945,144.9616571),
-    //content: '<i class="fa fa-map-marker fa-10x"></i>',
     mapTypeId: 'roadmap'
   });
     
