@@ -11,8 +11,8 @@ function initialize()
 //Melbourne CBD Boundary
 function melbourneMap() {
   map = new google.maps.Map(document.getElementById('map'), {
-    center: new google.maps.LatLng(-37.8149202, 144.9626441),//Setting Melbourne Position
-    zoom: 14
+    center: new google.maps.LatLng(-37.8133945,144.9616571),//Setting Melbourne Position
+    zoom: 15
   });
 
   var lineSymbol = {
@@ -56,8 +56,8 @@ features.forEach(function(feature) {
 //Camera function
 function cameraMap() {
   map = new google.maps.Map(document.getElementById('map'), {
-    zoom: 14,
-    center: new google.maps.LatLng(-37.8149202, 144.9626441),
+    zoom: 15,
+    center: new google.maps.LatLng(-37.8133945,144.9616571),
     //content: '<i class="fa fa-map-marker fa-10x"></i>',
     mapTypeId: 'roadmap'
   });
@@ -187,8 +187,8 @@ function cameraMap() {
 //Roundabout arrow function
 function arrows() {
   var map = new google.maps.Map(document.getElementById('map'), {
-    zoom: 14,
-    center: {lat: -37.8149202, lng: 144.9626441},
+    zoom: 15,
+    center: {lat: -37.8133945, lng: 144.9616571},
     mapTypeId: 'roadmap'
   });
 
