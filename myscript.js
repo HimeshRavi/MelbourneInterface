@@ -54,7 +54,7 @@ features.forEach(function(feature) {
 }
 
 //Camera function
-function initMap() {
+function cameraMap() {
   map = new google.maps.Map(document.getElementById('map'), {
     zoom: 14,
     center: new google.maps.LatLng(-37.8149202, 144.9626441),
@@ -259,7 +259,7 @@ $(document).ready(function(){
             $('#show').html("Making Melbourne CBD a huge roundabout.");
                   break;
             case '3':
-                  initMap();
+                  cameraMap();
             $('#show').html("These are the Zone 1 Camera locations in Melbourne CBD.");
                   break;
             case '4':
