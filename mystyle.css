@@ -33,3 +33,10 @@ html, body {
     flex-grow: 1;
     padding: 5px;
 }
+
+.form{
+    border: solid;
+    width: 40%;
+    padding: 10px;
+    margin-bottom: 25px;
+}

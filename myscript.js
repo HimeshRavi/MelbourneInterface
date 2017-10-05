@@ -269,3 +269,16 @@ $(document).ready(function(){
         }
     });
 });
+
+function calcTCI() {
+    var population = document.getElementById('population').value;
+    var space = document.getElementById('space').value;
+    var vehicle = document.getElementById('vehicle').value;
+    var time = document.getElementById('time').value;
+    //var reducedPop = population - (0.2 * population);
+    var maxPopArea = 0.825 * population;
+    var maxVehicleArea = 11.016 * vehicle;
+    var trafficIndex = (maxPopArea * space)/(maxVehicleArea * time);
+    var tci = trafficIndex/1000000;
+    document.getElementById('tci').innerHTML = "TCI: " + tci;
+}
