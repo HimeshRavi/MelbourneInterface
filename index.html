@@ -1,50 +1,72 @@
 <!DOCTYPE html>
 <html>
-  <head>
-      <title>Melbourne Interface</title>
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-      <link rel="stylesheet" type="text/css" href="mystyle.css">
-      <script src="myscript.js"></script>
-      <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCeE_fyfK0GdtaHf5KYPQXOmYaKFWllyRE&callback=initialize" async defer></script>
-<link rel="apple-touch-icon" sizes="57x57" href="images/apple-icon-57x57.png">
-<link rel="apple-touch-icon" sizes="60x60" href="images/apple-icon-60x60.png">
-<link rel="apple-touch-icon" sizes="72x72" href="images/apple-icon-72x72.png">
-<link rel="apple-touch-icon" sizes="76x76" href="images/apple-icon-76x76.png">
-<link rel="apple-touch-icon" sizes="114x114" href="images/apple-icon-114x114.png">
-<link rel="apple-touch-icon" sizes="120x120" href="images/apple-icon-120x120.png">
-<link rel="apple-touch-icon" sizes="144x144" href="images/apple-icon-144x144.png">
-<link rel="apple-touch-icon" sizes="152x152" href="images/apple-icon-152x152.png">
-<link rel="apple-touch-icon" sizes="180x180" href="images/apple-icon-180x180.png">
-<link rel="icon" type="image/png" sizes="192x192"  href="images/android-icon-192x192.png">
-<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="96x96" href="images/favicon-96x96.png">
-<link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
-<link rel="manifest" href="fav.ico/manifest.json">
-<meta name="msapplication-TileColor" content="#ffffff">
-<meta name="msapplication-TileImage" content="images/ms-icon-144x144.png">
-<meta name="theme-color" content="#ffffff">
-  </head>
-  <body>
-      <h2 align="center"><u>Alluvian - Make Roads Great Again.</u></h2>
-    <div id="map" style=""></div>
-      <br><marquee behavior="alternate" width="100%" scrollamount="7" onmouseover="this.stop()" onmouseout="this.start()">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+        <title>Congestion Relief System</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" type="text/css" href="mystyle.css">
+        <script src="myscript.js"></script>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCeE_fyfK0GdtaHf5KYPQXOmYaKFWllyRE&callback=initialize" async defer></script>
+        <link rel="apple-touch-icon" sizes="57x57" href="images/apple-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="images/apple-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="images/apple-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="images/apple-icon-76x76.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="images/apple-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="images/apple-icon-120x120.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="images/apple-icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="images/apple-icon-152x152.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="images/apple-icon-180x180.png">
+        <link rel="icon" type="image/png" sizes="192x192"  href="images/android-icon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="images/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+        <link rel="manifest" href="fav.ico/manifest.json">
+        <meta name="msapplication-TileColor" content="#ffffff">
+        <meta name="msapplication-TileImage" content="images/ms-icon-144x144.png">
+        <meta name="theme-color" content="#ffffff">
+    </head>
+    <body>
+        <h2 align="center"><u>Alluvian - Make Roads Great Again.</u></h2>
+        <div id="boxDIV" class="container">
+            <div class="flex-item" style="background-color: lightblue">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. 
+                Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. 
+                Nulla consequat massa quis enim.</div>
+            <div class="flex-item" style="background-color: coral">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. 
+                Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. 
+                Nulla consequat massa quis enim.</div>
+            <div class="flex-item" style="background-color: lightgreen">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. 
+                Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. 
+                Nulla consequat massa quis enim.</div>
+            <div class="flex-item" style="background-color: lightsalmon">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. 
+                Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. 
+                Nulla consequat massa quis enim.</div>
+        </div>
+        <div id="map" style=""></div>
+        <br><marquee behavior="alternate" width="100%" scrollamount="7" onmouseover="this.stop()" onmouseout="this.start()">
         <i class="fa fa-bus" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;&nbsp;
         <i class="fa fa-truck" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;&nbsp;
         <i class="fa fa-bicycle" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;&nbsp;
         <i class="fa fa-motorcycle" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;&nbsp;
         <i class="fa fa-subway" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;&nbsp;
         <i class="fa fa-car" aria-hidden="true"></i>
-</marquee>
-      <h2 align="center"><u>Melbourne Traffic Interface</u></h2>
-      <div class="row">
-          <div class="col" id="show">Radio Button selection description.</div>
-          <div class="col">
-              <p><input type='radio' name='content_type' value='1' />&nbsp;Melbourne CBD Boundary</p>
-              <p><input type='radio' name='content_type' value='2' />&nbsp;CBD Roundabout</p>
-              <p><input type='radio' name='content_type' value='3' />&nbsp;Camera Locations</p>
-              <p><input type='radio' name='content_type' value='4' />&nbsp;Default Map</p>
-          </div>
-          </div>
-  </body>
+        </marquee>
+        <h2 align="center"><u>Melbourne Traffic Interface</u></h2>
+        <div class="row">
+            <div class="col" id="show">Radio Button selection description.</div>
+            <div class="col">
+                <p><input type='radio' name='content_type' value='1' />&nbsp;Melbourne CBD Boundary</p>
+                <p><input type='radio' name='content_type' value='2' />&nbsp;CBD Roundabout</p>
+                <p><input type='radio' name='content_type' value='3' />&nbsp;Camera Locations</p>
+                <p><input type='radio' name='content_type' value='4' />&nbsp;Default Map</p>
+            </div>
+        </div>
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+    </body>
 </html>
